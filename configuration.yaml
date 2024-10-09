@@ -1,0 +1,11 @@
+# example of how a sensor could look like in home assistant
+mqtt:
+    sensor:
+    - name: "Strompreis"
+      unique_id: "strompreis_esteiermark_sensor"
+      unit_of_measurement: '€/kWh'
+      expire_after: 90400
+      device_class: monetary
+      icon: mdi:currency-eur
+      qos: 1
+      state_topic: "homeassistant/sensor/strompreis"
